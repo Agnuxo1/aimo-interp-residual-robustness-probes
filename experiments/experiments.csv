@@ -1,0 +1,14 @@
+id,fecha,hipotesis,configuracion,commit,metrica,decision
+E0,2026-10-28,always-true bundle satisfies contract,getting-started de79405 always-true --small,,val-sample acc=0.375 cov=1.0 invalid=0,accepted (contract ok)
+E0b,2026-10-28,always-true accepted by Codabench,submission 1015190,,public14 acc=0.50 cov=1.0,accepted (receipt)
+E1,2026-10-28,residual stream beats surface controls,grid pool x depth x pooled x C; 5 seeds x 5 grouped folds,,best single last:0.5 pooled AUROC=0.816±0.019 vs length 0.749 tfidf 0.731,accepted (pending E3/E4)
+E2,2026-10-28,probe ensemble improves stability,last:band+mean:0.75+mean:1 C=0.1,,acc=0.748±0.017 bacc=0.756±0.014 AUROC=0.825±0.009,accepted -> S1
+E2b,2026-10-28,S1 bundle satisfies contract offline,run_local.py --small 43 cases x2 (job b441079c0e034cd8),,coverage=1.0 invalid=0 deterministic; ~215 s/run on RTX3090,accepted -> submitted 1015306
+E3,2026-10-28,signal emerges with depth,layer sweep 21 depths x last/mean,,last-token AUROC 0.50@0 -> 0.78@25% -> 0.80-0.81 plateau 40-100%,accepted
+E4,2026-10-28,S1 beats controls (paired),bootstrap 2000 over problems,,dAUROC +0.095 [-0.014,0.204] vs length; +0.104 [-0.006,0.214] vs tfidf; +0.084 [-0.012,0.187] vs emb,inconclusive at 95% (positive point estimates)
+FIX,2026-10-28,audit: CRLF twin problems leak across folds,ids on whitespace-collapsed text; dedupe per (problem;model); proxy votes per labeller; ties dropped,,bacc 0.756->0.727 (audit re-run),accepted (all later results post-fix)
+E8,2026-10-28,post-fix ranking of configurations,8 candidates + 4 controls; 5 seeds x 5 grouped folds,,A last:band+mean:1 bacc=0.735 AUROC=0.812 within=0.762 oly_bacc=0.593; S1 bacc=0.715 oly_bacc=0.531,A selected (JEV 0.96)
+E8n,2026-10-28,honest estimate incl. selection,nested CV (inner 4-fold),,acc=0.720 bacc=0.732±0.023 AUROC=0.805±0.012 within=0.746,accepted (headline honest estimate)
+E6,2026-10-28,mid-layer probe subspace is a causal bottleneck,forward-hook erasure rank 1/16 at L/2 vs random,,downstream AUROC 0.735->0.739/0.750 (random 0.723-0.736),rejected (redundant encoding)
+E9,2026-10-28,A beats permuted labels and controls,perm 200 + paired bootstrap 2000 (own and problem-level),,p=0.005; problem-level dAUROC vs length +0.052 [0.002;0.104],accepted
+S2,2026-10-28,final bundle satisfies contract,run_local --small x2 (job 369db1e321c241b6); Codabench 1015694,,coverage 1.0 invalid 0; public14 acc 0.571,accepted (final submission)

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Reading Robustness Before Reasoning: Residual-Stream Probes Predict Perturbation Robustness of Small Math LLMs"
+authors:
+  - family-names: "Angulo de Lafuente"
+    given-names: "Francisco"
+repository-code: "https://github.com/Agnuxo1/aimo-interp-residual-robustness-probes"
+license: Apache-2.0
+date-released: 2026-10-28
+keywords: [interpretability, linear probes, residual stream, robustness, AIMO, mathematical reasoning]

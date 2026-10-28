@@ -1,0 +1,13 @@
+data/
+baselines/
+src/data/
+features/
+artifacts/
+bundle/
+*.zip
+__pycache__/
+.venv/
+*.log
+report/*.aux
+report/*.log
+report/*.out
