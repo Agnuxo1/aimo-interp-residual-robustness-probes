@@ -8,6 +8,10 @@
 
 <p align="center"><img src="figures/pipeline.gif" width="900" alt="Pipeline: problem, one forward pass, residual stream, linear probes, verdict"></p>
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> A prompt-only forward pass and small linear probes provide an early signal of whether a reasoning model will withstand problem perturbations, without sampling repeated solution chains. This makes the <a href="#method">published method</a> a potential screening layer for allocating later reasoning effort. Grouped and nested evaluations retain the observed signal, but scarce labels and correlational probes limit claims about general reliability or realised compute savings.</sub>
+<!-- impact-note:end -->
+
 ## TL;DR
 
 For each of the four Small-Track models (Qwen3.5-4B, DeepSeek-R1-0528-Qwen3-8B, OLMo-3-7B-Think, Skywork-OR1-Math-7B) we read the model's own residual stream on the prompt and apply two small linear probes. Under leave-problem-out cross-validation the probes separate *robust* from *spurious* (model, problem) pairs far above chance and above every text-only control:
