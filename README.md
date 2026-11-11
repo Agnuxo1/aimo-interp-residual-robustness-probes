@@ -126,6 +126,8 @@ report/         technical report (OpenReview)
 
 ## Codabench submissions (Small Model Track)
 
+**Official technical report:** [OpenReview submission #9 — *Reading Robustness Before Reasoning*](https://openreview.net/forum?id=ICaEbpYqGK), associated with final Small Models entry **Codabench #1015694**. [Read the submitted report PDF](report/report.pdf). This repository preserves the implementation, experiment logs, controls and reproducibility materials.
+
 | ID | Bundle | Public 14-case score |
 |---|---|---|
 | 1015694 | residual-stream probes (this repository, final) | accuracy 0.571, coverage 1.0, 0 invalid |
